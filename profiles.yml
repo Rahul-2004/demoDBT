@@ -1,0 +1,12 @@
+demoprj:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: lakehouse.duckdb
+      extensions: [ducklake]
+      attach: 
+        - path: "ducklake:./data/lakehouse.datalake"
+          alias: lake
+          options:
+            data_path: "./data/lakehouse_files/"
